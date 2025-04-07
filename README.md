@@ -1,32 +1,43 @@
-# Exploratory Data Analysis – Personality Traits and Drug Use
+# Eksploracyjna analiza danych – cechy osobowości a używanie substancji
 
-This project presents an exploratory analysis of the relationship between personality traits and ecstasy use. The data comes from a public dataset that includes psychological profiles and self-reported drug use among 1885 respondents.
+Projekt przedstawia eksploracyjną analizę zależności między cechami osobowości a zażywaniem ekstazy. Dane pochodzą z publicznego zbioru, który zawiera profile psychologiczne oraz deklaracje dotyczące używania substancji psychoaktywnych przez 1885 respondentów.
 
-## Objective
+## Cel analizy
 
-The goal of this analysis is to investigate whether selected personality traits (based on the NEO-FFI-R model) are related to the likelihood of ecstasy use. The project uses various visualizations to explore potential patterns and correlations.
+Celem analizy jest zbadanie, czy wybrane cechy osobowości (zgodnie z modelem NEO-FFI-R) mają związek z prawdopodobieństwem zażywania ekstazy. W projekcie zastosowano różne metody wizualizacji i analizy wielowymiarowej.
 
-## Dataset
+## Zbiór danych
 
-- Name: **Drug Consumption (Quantified)**
-- Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/373/drug+consumption+quantified)
-- Size: 1885 observations, 12 personality and demographic features, 18 target variables (various substances)
+- Nazwa: **Drug Consumption (Quantified)**
+- Źródło: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/373/drug+consumption+quantified)
+- Rozmiar: 1885 obserwacji, 12 zmiennych cech i demograficznych, 18 zmiennych dot. substancji
 
-## Data columns used
+## Wykorzystane zmienne
 
-- Personality traits: Neuroticism, Extraversion, Openness, Agreeableness, Conscientiousness
-- Additional: Impulsiveness, Sensation Seeking, Age, Gender
-- Drug use (selected): Ecstasy
+- Cechy osobowości: neurotyczność, ekstrawersja, otwartość, ugodowość, sumienność
+- Dodatkowe: impulsywność, poszukiwanie wrażeń, wiek, płeć
+- Używanie substancji (wybrane): ekstaza
 
-## Structure of the repository
+## Struktura repozytorium
 
-- `eda_crime_personality.R` – main R script with visualizations:
-  - Histograms of personality traits
-  - Boxplots comparing users vs non-users
-  - Correlation heatmaps and matrix using `corrplot`
-  - Line plots with personality profiles
+- `eda_crime_personality.R` – analiza eksploracyjna:
+  - histogramy cech osobowości,
+  - boxploty w zależności od użycia ekstazy,
+  - macierz korelacji i heatmapa,
+  - profil przeciętnego użytkownika.
 
-## Notes
+- `factor_analysis.R` – analiza czynnikowa:
+  - ekstrakcja trzech czynników metodą głównych osi z rotacją varimax,
+  - wizualizacja ładunków czynnikowych (diagram + wykres bąbelkowy).
 
-- All data used in this project is open and licensed under **Creative Commons Attribution 4.0 International**.
-- This analysis is purely exploratory and intended for educational purposes.
+- `pca_analysis.R` – analiza głównych składowych (PCA):
+  - redukcja wymiaru dla cech osobowości,
+  - wykres scree plot z udziałem wariancji.
+
+- `data/data.csv` – przetworzony zbiór danych wejściowych.
+
+## Uwagi
+
+- Dane wykorzystywane w projekcie są dostępne publicznie i objęte licencją **Creative Commons Attribution 4.0 International**.
+- Projekt ma charakter edukacyjny i został przygotowany w ramach ćwiczeń z analizy danych.
+
